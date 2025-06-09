@@ -26,7 +26,7 @@ def create_app(config_name='default'):
     print("DATABASE_URL en runtime:", os.environ.get('DATABASE_URL'))
 
     # Configuración de la base de datos PostgreSQL
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://neondb_owner:npg_rX7lAiN2TYWt@ep-nameless-sound-a8womhp2-pooler.eastus2.azure.neon.tech/qlocura?sslmode=require'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['JWT_SECRET_KEY'] = 'supersecretkey'
     app.config['PROPAGATE_EXCEPTIONS'] = True
