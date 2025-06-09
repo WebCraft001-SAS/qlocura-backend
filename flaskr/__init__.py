@@ -23,6 +23,7 @@ from .vistas.vistas import (
 #pp
 def create_app(config_name='default'):
     app = Flask(__name__)
+    print("DATABASE_URL en runtime:", os.environ.get('DATABASE_URL'))
 
     # Configuración de la base de datos PostgreSQL
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
