@@ -31,6 +31,12 @@ def create_app(config_name='default'):
     app.config['JWT_SECRET_KEY'] = 'supersecretkey'
     app.config['PROPAGATE_EXCEPTIONS'] = True
 
+    app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+    'pool_pre_ping': True
+}
+
+    db = SQLAlchemy(app)
+
     # Inicializar extensiones
     db.init_app(app)
     Migrate(app, db)
