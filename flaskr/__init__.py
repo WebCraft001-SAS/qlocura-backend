@@ -46,7 +46,7 @@ def create_app(config_name='default'):
     # Rutas públicas
     api.add_resource(VistaSignin, '/signin')
     api.add_resource(VistalogIn, '/login')
-#jsdfdfddd
+#jsdfdd
     # Rutas protegidas / administrativas
     api.add_resource(UsuariosResource, '/usuarios', '/usuarios/<int:id>')
     api.add_resource(ProductosResource, '/productos', '/productos/<int:id>')

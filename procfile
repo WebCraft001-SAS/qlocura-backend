@@ -1,3 +1,1 @@
-gunicorn wsgi:app
-
-
+web: gunicorn 'flaskr:create_app()'
