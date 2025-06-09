@@ -62,4 +62,3 @@ def create_app(config_name='default'):
     api.add_resource(PedidoPorUsuarioYEstadoResource, '/pedidos/usuario/estado/<string:estado>/<int:id>')
 
     return app
-app = create_app()
