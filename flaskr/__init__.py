@@ -36,7 +36,7 @@ def create_app(config_name='default'):
     Migrate(app, db)
     JWTManager(app)
     CORS(app)
-    SQLAlchemy(app)
+    
 
     # Configuración de la API RESTful
     api = Api(app,
